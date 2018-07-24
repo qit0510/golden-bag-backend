@@ -20,4 +20,16 @@ public class OrginServiceImpl implements OrginService {
     public List<Department> findAll(){
         return orginRepository.findAll();
     }
+    @Override
+    public void save(Department department) {
+
+        orginRepository.save(department);
+    }
+
+    @Override
+    public void del(Long id) {
+        orginRepository.deleteById(id);
+
+    }
+
 }

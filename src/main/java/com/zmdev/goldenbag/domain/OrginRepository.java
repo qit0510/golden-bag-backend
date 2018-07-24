@@ -7,4 +7,6 @@ import java.util.List;
 public interface OrginRepository  extends JpaRepository<Department, Long> {
 
     List<Department> findAll();
+
+
 }
