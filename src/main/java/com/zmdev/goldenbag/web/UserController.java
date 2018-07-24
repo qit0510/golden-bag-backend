@@ -28,9 +28,7 @@ public class UserController extends BaseController {
                         )
                 )
         );
-
     }
-
     @GetMapping("/{id}")
     public Response show(@PathVariable Long id){
         return new ResponseData(userService.findById(id));

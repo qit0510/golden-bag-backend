@@ -1,5 +1,6 @@
 package com.zmdev.goldenbag.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
@@ -27,6 +28,7 @@ public class Department {
     private Date updatedAt;
 
     @ManyToOne
+    @JsonBackReference
     @PrimaryKeyJoinColumn(name = "parent_id", columnDefinition = "Default 0")
     private Department parent;
 
